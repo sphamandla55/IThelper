@@ -193,6 +193,15 @@ export default function App() {
         <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-slate-100 dark:bg-slate-800/30 opacity-60 blur-3xl transition-colors" />
       </div>
 
+      {/* Footer */}
+      <footer className="border-t border-slate-200/80 dark:border-slate-800/80 mt-6 transition-colors">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-6 text-center">
+          <p className="text-xs text-slate-400 dark:text-slate-500 font-medium tracking-wide">
+            Founded by <span className="font-semibold text-slate-600 dark:text-slate-300">Nyamanas Phamandla</span>
+          </p>
+        </div>
+      </footer>
+
       {/* AI Assistant */}
       <AIAssistant
         isOpen={assistantOpen}
