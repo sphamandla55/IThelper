@@ -49,7 +49,9 @@ export default function App() {
   const currentStep = activeCategory ? activeCategory.steps[currentStepId] : null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors">
+    <div className="min-h-screen relative transition-colors">
+      {/* Base gradient background */}
+      <div className="fixed inset-0 -z-20 bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors" />
       {/* Header */}
       <header className="border-b border-slate-200/80 dark:border-slate-800/80 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm sticky top-0 z-10 transition-colors">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
@@ -189,15 +191,16 @@ export default function App() {
 
       {/* Background decorative elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
-        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-blue-200/40 dark:bg-blue-900/20 opacity-70 blur-3xl animate-float-slow transition-colors" />
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-emerald-200/40 dark:bg-emerald-900/20 opacity-70 blur-3xl animate-float-slower transition-colors" />
-        <div className="absolute top-1/3 left-1/2 w-72 h-72 rounded-full bg-amber-100/30 dark:bg-amber-900/15 opacity-60 blur-3xl animate-float-slow transition-colors" />
-        {/* Grid pattern */}
+        {/* Animated gradient orbs */}
+        <div className="absolute -top-20 -right-20 w-[28rem] h-[28rem] rounded-full bg-blue-400/25 dark:bg-blue-600/20 blur-[80px] animate-float-slow transition-colors" />
+        <div className="absolute -bottom-20 -left-20 w-[28rem] h-[28rem] rounded-full bg-emerald-400/25 dark:bg-emerald-600/20 blur-[80px] animate-float-slower transition-colors" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full bg-amber-300/20 dark:bg-amber-600/15 blur-[80px] animate-float-slow transition-colors" />
+        {/* Subtle dot grid */}
         <div
-          className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] transition-opacity"
+          className="absolute inset-0 opacity-[0.07] dark:opacity-[0.1] transition-opacity"
           style={{
             backgroundImage: 'radial-gradient(circle at 1px 1px, rgb(100 116 139) 1px, transparent 0)',
-            backgroundSize: '32px 32px',
+            backgroundSize: '28px 28px',
           }}
         />
       </div>
