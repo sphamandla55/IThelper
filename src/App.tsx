@@ -189,8 +189,17 @@ export default function App() {
 
       {/* Background decorative elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
-        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-slate-100 dark:bg-slate-800/30 opacity-60 blur-3xl transition-colors" />
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-slate-100 dark:bg-slate-800/30 opacity-60 blur-3xl transition-colors" />
+        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-blue-200/40 dark:bg-blue-900/20 opacity-70 blur-3xl animate-float-slow transition-colors" />
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-emerald-200/40 dark:bg-emerald-900/20 opacity-70 blur-3xl animate-float-slower transition-colors" />
+        <div className="absolute top-1/3 left-1/2 w-72 h-72 rounded-full bg-amber-100/30 dark:bg-amber-900/15 opacity-60 blur-3xl animate-float-slow transition-colors" />
+        {/* Grid pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] transition-opacity"
+          style={{
+            backgroundImage: 'radial-gradient(circle at 1px 1px, rgb(100 116 139) 1px, transparent 0)',
+            backgroundSize: '32px 32px',
+          }}
+        />
       </div>
 
       {/* Footer */}
